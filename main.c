@@ -15,38 +15,41 @@ int main() {
 
   n100 = money/100;
 
-  if(d<5){
-    if(d%2==0){
-      n50 = 0;
-      n20 = (money%100)/20;
+  if(d < 5){
+    n50 = 0;
+    n20 = (money%100)/20;
+    //n10 = (money%20)/10;
+    if (u%2 == 0){
       n10 = (money%20)/10;
-
-      
+      n5 = 0;
+      n2 = (money%10)/2;
     }else{
-      n50 = 0;
-      n20 = (money%100)/20;
-      n10 = 1;
-
-      
+      if(u < 5){
+        
+      }else{
+        n10 = (money%20)/10;
+        n5 = (money%10)/5;
+        n2 = (money%5)/2;
+      }
     }
   }else{
-    if(d%2==0){
+    if(d%2 == 0){
       n50 = 1;
       n20 = (money%50)/20;
       n10 = 1;
-
-      
+      n5 = (money%10)/5;
+      n2 = (money%5)/2;
     }else{
       n50 = 1;
       n20 = (money%50)/20;
       n10 = 0;
-      
-      
+      n5 = (money%10)/5;
+      n2 = (money%5)/2;
     }
   }
   
   
-  /*if (money%2 == 0){
+  /*if (u%2 == 0){
     n10 = (money%50)/10;
     n5 = 0;
     n2 = (money%10)/2;
