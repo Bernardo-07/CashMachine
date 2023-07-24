@@ -14,8 +14,39 @@ int main() {
   u = money - 1000*m - 100*c - 10*d;
 
   n100 = money/100;
-  n50 = (money%100)/50;
-  if (money%2 == 0){
+
+  if(d<5){
+    if(d%2==0){
+      n50 = 0;
+      n20 = (money%100)/20;
+      n10 = (money%20)/10;
+
+      
+    }else{
+      n50 = 0;
+      n20 = (money%100)/20;
+      n10 = 1;
+
+      
+    }
+  }else{
+    if(d%2==0){
+      n50 = 1;
+      n20 = (money%50)/20;
+      n10 = 1;
+
+      
+    }else{
+      n50 = 1;
+      n20 = (money%50)/20;
+      n10 = 0;
+      
+      
+    }
+  }
+  
+  
+  /*if (money%2 == 0){
     n10 = (money%50)/10;
     n5 = 0;
     n2 = (money%10)/2;
@@ -31,8 +62,8 @@ int main() {
       n5 = (money%10)/5;
       n2 = (money%5)/2;
     }
-  }
+  }*/
 
-  printf("\n%d notas de 100\n%d notas de 50\n%d notas de 10\n%d notas de 5\n%d notas de 2", n100, n50, n10, n5, n2);
+  printf("\n%d notas de 100\n%d notas de 50\n%d notas de 20\n%d notas de 10\n%d notas de 5\n%d notas de 2", n100, n50, n20, n10, n5, n2);
   return 0;
 }
