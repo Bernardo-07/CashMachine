@@ -41,19 +41,22 @@ int main() {
       }
     }
   }else{
+    n50 = 1;
+    n20 = (money%50)/20;
     if(d%2 == 0){
-      n50 = 1;
-      n20 = (money%50)/20;
       n10 = 1;
-      n5 = (money%10)/5;
-      n2 = (money%5)/2;
     }else{
-      n50 = 1;
-      n20 = (money%50)/20;
       n10 = 0;
-      n5 = (money%10)/5;
-      n2 = (money%5)/2;
     }
+    if(u%2 == 0){
+      n5 = 0;
+      n2 = (money%10)/2;
+    }else{
+      //falta essa parte
+    }
+  }
+  if(d == 0){
+    //falta essa parte tbm
   }
   
   
